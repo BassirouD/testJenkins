@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools {
-        maven 'maven3.9.3'
+        maven 'maven391'
     }
     stages {
         stage('Parallelization') {
