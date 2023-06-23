@@ -12,7 +12,7 @@ public class CalculatorTest {
     @Test
     public void testSubtract() {
         int result = MathUtils.subtract(5, 3);
-        assertEquals(2, result);
+        assertEquals(6, result);
     }
     @Test
     public void testCalculatorAdd() {
