@@ -10,7 +10,6 @@ pipeline{
                     steps {
                         echo "Le step de test"
                         sh 'mvn --version'
-                        sh 'mvn test'
                     }
                 }
                 stage('Unit test') {
