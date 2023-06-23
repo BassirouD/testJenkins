@@ -6,9 +6,8 @@ pipeline{
     stages {
         stage('Parallelization') {
             parallel(){
-                stage('Echo') {
+                stage('Voir version') {
                     steps {
-                        echo "Le step de test"
                         sh 'mvn --version'
                     }
                 }
@@ -28,7 +27,7 @@ pipeline{
        stage('Scan with sonarqube') {
                    steps {
                        withSonarQubeEnv(installationName: 'SonarQube'){
-                           sh "mvn clean verify sonar:sonar -Dsonar.projectKey=JUnit-sonar -Dsonar.projectName='JUnit-sonar' -Dsonar.host.url=http://10.245.172.239:9000 -Dsonar.token=sqp_be32ac3a7b0f273be0769fd45a72b168f7a4aa7c"
+                           sh "mvn clean verify sonar:sonar -Dsonar.projectKey=JUnit-sonar -Dsonar.projectName='JUnit-sonar' -Dsonar.host.url=https://de09-194-199-64-71.ngrok-free.app -Dsonar.token=sqp_be32ac3a7b0f273be0769fd45a72b168f7a4aa7c"
                        }
                    }
                }
