@@ -7,7 +7,7 @@ public class CalculatorTest {
     @Test
     public void testAdd() {
         int result = MathUtils.add(2, 3);
-        assertEquals(0, result);
+        assertEquals(5, result);
     }
     @Test
     public void testSubtract() {
